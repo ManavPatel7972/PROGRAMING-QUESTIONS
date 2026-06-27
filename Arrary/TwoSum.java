@@ -49,4 +49,15 @@ public class TwoSum {
 
         return new int[]{-1,-1};
     }
+
+    // time complexity: O(n) for hash map approach, O(n^2) for brute force approach.
+    // space complexity: O(n) for hash map approach, O(1) for brute force approach.
+
+    // /Third approach using two pointer technique:
+    // 1. create a new array of Pair class which contains the value and index of the original array.
+    // 2. sort the new array based on the value of the Pair class.
+    // 3. left = 0, right  =  array length - 1
+    // 4. while left < right, if sum == target, return the indices of the original array. if sum < target, left++, else right--.
+    // 5. time complexity: O(nlogn) for sorting, O(n) for two pointer technique, so overall time complexity is O(nlogn).
+    // space complexity: O(n) for new array of Pair class.
 }
