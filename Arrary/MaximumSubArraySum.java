@@ -6,14 +6,16 @@ public class MaximumSubArraySum {
         System.out.println("The maximum subArray sum is: " + maxSum);
     }
 
-    public static int maxSubArray(int[] arr){
-        
+    // time complexity: O(n^3).
+    // space complexity: O(1).
+    public static int maxSubArray(int[] arr) {
+
         int max = Integer.MIN_VALUE;
 
         for (int i = 0; i < arr.length; i++) {
-            
+
             for (int j = i; j < arr.length; j++) {
-                
+
                 int sum = 0;
 
                 for (int k = i; k <= j; k++) {
@@ -27,21 +29,19 @@ public class MaximumSubArraySum {
         return max;
     }
 
-    public static int maxSubArray2(int[] arr){
-        
+    // time complexity: O(n^2).
+    // space complexity: O(1).
+    public static int maxSubArray2(int[] arr) {
+
         int max = Integer.MIN_VALUE;
-        int sum = 0;
 
         for (int i = 0; i < arr.length; i++) {
-            
-            sum += arr[i];
 
-            if(sum > max) {
-                max = sum;
-            }
+            int sum = 0;
 
-            if(sum < 0){
-                sum = 0;
+            for (int j = i; j < arr.length; j++) {
+                sum += arr[j];
+                max = Math.max(max, sum);
             }
 
         }
@@ -49,27 +49,31 @@ public class MaximumSubArraySum {
         return max;
     }
 
-    public static int maxSubArray3(int[] arr){
-        
+    // time complexity: O(n).
+    // space complexity: O(1).
+    public static int maxSubArray3(int[] arr) {
+
         int max = Integer.MIN_VALUE;
         int sum = 0;
         int start = -1;
 
-        int ansEnd = -1; int ansStart = -1;
+        int ansEnd = -1;
+        int ansStart = -1;
 
         for (int i = 0; i < arr.length; i++) {
 
-            if(sum == 0)  start = i;
+            if (sum == 0)
+                start = i;
 
             sum += arr[i];
 
-            if(sum > max) {
+            if (sum > max) {
                 max = sum;
                 ansStart = start;
                 ansEnd = i;
             }
 
-            if(sum < 0){
+            if (sum < 0) {
                 sum = 0;
             }
 
