@@ -7,15 +7,15 @@ public class FirstAndLastOccurrence {
         System.out.println("{" + res[0] + ", " + res[1] + "}");
     }
 
-    
-
     public static int[] firstAndLast(int[] arr, int target) {
+
         int lb = lowerBound(arr, target);
         int up = upperBound(arr, target);
 
-        if(arr[lb] != target || lb == arr.length) return new int[]{-1,-1};
+        if (lb == arr.length || arr[lb] != target)
+            return new int[] { -1, -1 };
 
-        return new int[]{lb,up-1};
+        return new int[] { lb, up - 1 };
     }
 
     public static int lowerBound(int[] arr, int x) {
