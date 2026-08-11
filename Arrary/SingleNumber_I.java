@@ -19,4 +19,17 @@ public class SingleNumber_I {
 
         return arr[arr.length - 1];
     }
+
+    public static int helper(int[] arr) {
+        if (arr.length == 0)
+            return 0;
+
+        int l = 0;
+        int r = arr.length - 1;
+
+        while (l <= r) {
+            if()
+        }
+
+    }
 }
