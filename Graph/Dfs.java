@@ -10,11 +10,11 @@ public class Dfs {
 
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
 
-        for(int i=0;i<=V;i++){
+        for (int i = 0; i <= V; i++) {
             adj.add(new ArrayList<>());
         }
 
-        for(int i=0;i<E;i++){
+        for (int i = 0; i < E; i++) {
             int u = sc.nextInt();
             int v = sc.nextInt();
 
@@ -25,34 +25,43 @@ public class Dfs {
         ArrayList<Integer> dfs = dfsOfGraph(V, adj);
 
         for (Integer it : dfs) {
-           System.out.print(it + " ");
+            System.out.print(it + " ");
         }
 
         sc.close();
     }
-    
-    public static ArrayList<Integer> dfsOfGraph(int V,ArrayList<ArrayList<Integer>> adj){
+
+    public static ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
 
         ArrayList<Integer> ls = new ArrayList<>();
-        boolean[] vis = new boolean[V+1];
+        // HERE 1 BASED INDEXING
+        boolean[] vis = new boolean[V + 1];
 
         // stating Node
         vis[0] = true;
 
-        dfs(0,vis, adj,ls);
+        dfs(0, vis, adj, ls);
         return ls;
 
     }
 
-    public static void dfs(int node, boolean[] vis, ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> ls){
+    public static void dfs(int node, boolean[] vis, ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> ls) {
 
         vis[node] = true;
         ls.add(node);
 
         for (Integer it : adj.get(node)) {
-            if(vis[it] == false){
+            if (vis[it] == false) {
                 dfs(it, vis, adj, ls);
             }
         }
+
+        // for (int i = 0; i < adj.get(node).size(); i++) {
+        // int temp = adj.get(node).get(i);
+
+        // if (vis[temp] == false) {
+        // dfs(temp, vis, adj, ls);
+        // }
+        // }
     }
 }
