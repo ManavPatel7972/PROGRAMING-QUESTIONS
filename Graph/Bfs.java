@@ -8,7 +8,7 @@ public class Bfs {
         Scanner sc = new Scanner(System.in);
         int V = sc.nextInt();
         int E = sc.nextInt();
-
+        
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
 
         for (int i = 0; i <= V; i++) {
