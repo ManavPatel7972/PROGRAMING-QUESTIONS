@@ -9,12 +9,12 @@ public class ConnectedComponents {
         int V = 5;
 
         // List of undirected edges
-        int[][] edges = {{0, 1}, {1, 2}, {3, 4}};
+        int[][] edges = { { 0, 1 }, { 1, 2 }, { 3, 4 } };
 
         System.out.println("Number of Connected Components: " + countComponents(V, edges));
     }
 
-    public static int countComponents(int V, int[][] edges){
+    public static int countComponents(int V, int[][] edges) {
 
         List<List<Integer>> adj = new ArrayList<>();
 
@@ -32,7 +32,7 @@ public class ConnectedComponents {
         int cnt = 0;
 
         for (int i = 0; i < V; i++) {
-            if(!vis[i]){
+            if (!vis[i]) {
                 cnt++;
 
                 Queue<Integer> q = new LinkedList<>();
@@ -43,14 +43,13 @@ public class ConnectedComponents {
                     int node = q.poll();
 
                     for (Integer it : adj.get(node)) {
-                        if(!vis[it]){
+                        if (!vis[it]) {
                             vis[it] = true;
                             q.add(it);
                         }
                     }
 
                 }
-
 
             }
         }
