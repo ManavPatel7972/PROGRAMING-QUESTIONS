@@ -27,9 +27,7 @@ public class SingleNumber_I {
         int l = 0;
         int r = arr.length - 1;
 
-        while (l <= r) {
-            if()
-        }
+        return -1;
 
     }
 }
