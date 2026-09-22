@@ -1,4 +1,4 @@
 {
   "java.debug.settings.onBuildFailureProceed": true,
-  "cSpell.words": ["Atoi"]
+  "cSpell.words": ["Atoi", "Warshall"]
 }
