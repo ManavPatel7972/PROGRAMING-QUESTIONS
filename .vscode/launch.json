@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "N_Queens",
+      "request": "launch",
+      "mainClass": "N_Queens",
+      "projectName": "DSA_21c894e6"
+    },
+    {
+      "type": "java",
       "name": "FindTheDifference",
       "request": "launch",
       "mainClass": "FindTheDifference",
