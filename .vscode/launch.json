@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ContainsDuplicate_II",
+      "request": "launch",
+      "mainClass": "ContainsDuplicate_II",
+      "projectName": "DSA_21c894e6"
+    },
+    {
+      "type": "java",
       "name": "N_Queens",
       "request": "launch",
       "mainClass": "N_Queens",
