@@ -35,4 +35,24 @@ public class ContainsDuplicate_II {
 
         return false;
     }
+
+    public static boolean isDuplicateOptimize(int[] arr, int k) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (map.containsKey(arr[i])) {
+
+                int prevIdx = map.get(arr[i]);
+
+                if (i - prevIdx <= k) {
+                    return true;
+                }
+            }
+
+            map.put(arr[i], i);
+        }
+
+        return false;
+    }
 }
