@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "SummaryRanges",
+      "request": "launch",
+      "mainClass": "SummaryRanges",
+      "projectName": "DSA_21c894e6"
+    },
+    {
+      "type": "java",
+      "name": "RangeSumQueryImmutable",
+      "request": "launch",
+      "mainClass": "RangeSumQueryImmutable",
+      "projectName": "DSA_21c894e6"
+    },
+    {
+      "type": "java",
       "name": "ContainsDuplicate_II",
       "request": "launch",
       "mainClass": "ContainsDuplicate_II",
