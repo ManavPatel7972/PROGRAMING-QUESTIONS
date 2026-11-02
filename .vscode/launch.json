@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "RelativeRanks",
+      "request": "launch",
+      "mainClass": "RelativeRanks",
+      "projectName": "DSA_21c894e6"
+    },
+    {
+      "type": "java",
+      "name": "ReverseBits",
+      "request": "launch",
+      "mainClass": "ReverseBits",
+      "projectName": "DSA_21c894e6"
+    },
+    {
+      "type": "java",
       "name": "SummaryRanges",
       "request": "launch",
       "mainClass": "SummaryRanges",
