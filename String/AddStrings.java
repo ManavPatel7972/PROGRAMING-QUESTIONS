@@ -10,7 +10,7 @@ public class AddStrings {
     public static String add(String s1, String s2) {
         int i = s1.length() - 1;
         int j = s2.length() - 1;
-        int carry = 0;
+        int carry = 0;r
 
         StringBuilder sb = new StringBuilder();
 
