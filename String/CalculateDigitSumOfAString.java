@@ -27,4 +27,32 @@ public class CalculateDIgitSumOfAString {
 
     }
 
+    public String digitSum(String s, int k) {
+
+        while (s.length() > k) {
+
+            StringBuilder result = new StringBuilder();
+
+            int i = 0;
+
+            while (i < s.length()) {
+
+                int sum = 0;
+                int count = 0;
+
+                while (i < s.length() && count < k) {
+                    sum += s.charAt(i) - '0';
+                    i++;
+                    count++;
+                }
+
+                result.append(sum);
+            }
+
+            s = result.toString();
+        }
+
+        return s;
+    }
+
 }
