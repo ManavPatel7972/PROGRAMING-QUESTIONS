@@ -27,4 +27,15 @@ public class StudentAttendanceRecord_I {
 
         return true;
     }
+
+    public boolean checkRecordAnotherWay(String s) {
+
+        if (s.indexOf('A') != s.lastIndexOf('A'))
+            return false;
+
+        if (s.contains("LLL"))
+            return false;
+
+        return true;
+    }
 }
